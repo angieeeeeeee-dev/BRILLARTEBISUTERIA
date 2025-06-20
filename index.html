@@ -1,1 +1,179 @@
-hola mundo
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrillArte Bisutería</title>
+  <style>
+    :root {
+      --beis-claro: #f5f0e6;
+      --dorado-suave: #c2a770;
+      --cafe-claro: #a67c52;
+      --cafe-oscuro: #5a3e2b;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--beis-claro);
+      color: var(--cafe-oscuro);
+    }
+
+    .contenedor {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .caja-grande {
+      background: var(--cafe-claro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(90, 62, 43, 0.2);
+    }
+
+    .cuerpo-medio {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .columna-izquierda {
+      width: 30%;
+      min-width: 200px;
+      height: 150px;
+      background: var(--dorado-suave);
+      border-radius: 12px;
+      text-align: center;
+      line-height: 150px;
+      font-weight: bold;
+      color: var(--beis-claro);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .columna-derecha {
+      flex: 1;
+      height: 150px;
+      background: #e6d6c2;
+      border-radius: 12px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .columna-derecha img {
+      max-height: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .fila-tres-cajas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .caja-pequeña {
+      flex: 1;
+      min-width: 200px;
+      height: 150px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .caja-pequeña img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .caja-pequeña::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(90, 62, 43, 0.7);
+      color: var(--blanco);
+      font-weight: bold;
+      padding: 6px;
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    .pie {
+      background: var(--cafe-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .cuerpo-medio {
+        flex-direction: column;
+      }
+
+      .columna-izquierda, .columna-derecha {
+        width: 100%;
+        height: auto;
+        line-height: 60px;
+      }
+
+      .columna-derecha img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="caja-grande">BRILLARTE BISUTERIA</div>
+
+    <div class="cuerpo-medio">
+      <div class="columna-izquierda">¡HECHO A MANO!</div>
+      <div class="columna-derecha">
+        <img src="https://media.tenor.com/nH1Z6GeiyOQAAAAi/wearing-pearls-om-nom.gif" alt="Gif de bisutería">
+      </div>
+    </div>
+
+    <div class="fila-tres-cajas">
+      <div class="caja-pequeña" data-label="ARETES">
+        <img src="aretesdenovedad.jpg" alt="Aretes">
+      </div>
+      <div class="caja-pequeña" data-label="MANILLAS">
+        <img src="manillas.jpg" alt="Manillas">
+      </div>
+      <div class="caja-pequeña" data-label="COLLARES">
+        <img src="collar.jpg" alt="Collares">
+      </div>
+    </div>
+
+    <div class="pie">
+      📱 Síguenos en Instagram y Facebook | 💌 brillarte@gmail.com | 💖 ¡Gracias por tu apoyo!
+    </div>
+  </div>
+</body>
+</html>
